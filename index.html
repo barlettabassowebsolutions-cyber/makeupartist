@@ -1,0 +1,678 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta property="og:title" content="Shruti Arya MUA">
+<meta property="og:description" content="Bridal and special-event makeup and hair on Long Island and in New York City.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 fill=%27%23121212%27/%3E%3Ctext x=%2716%27 y=%2723%27 font-family=%27Georgia,serif%27 font-style=%27italic%27 font-size=%2720%27 fill=%27%23F5F5F5%27 text-anchor=%27middle%27%3ES%3C/text%3E%3C/svg%3E">
+<title>Shruti Arya MUA</title>
+<meta name="description" content="Bridal and special-event makeup and hair on Long Island and in New York City. Now booking 2027–2028 brides.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Hanken+Grotesk:wght@400;500;600&display=swap">
+<style>
+/* Layout: modeled on the Squarespace "Kusa" template. Dark hero with a bleeding portrait and an overlapping
+   serif headline, off-white editorial sections, a staggered three-card grid, a dark testimonial band,
+   a brick-rose portfolio band, scattered photos, and a dark footer that holds the booking form.
+   Single deliberate palette taken from the template link, so there is no separate dark theme. */
+:root{
+  --night:#121212;
+  --paper:#F5F5F5;
+  --rose:#A74D4A;
+  --sage:#818B7E;
+  --sage-light:#A9B1A6;
+  --linen:#EAE6E1;
+  --ink:#121212;
+  --muted:#5A5A5A;
+  --rule:#8A8A8A;
+  --night-muted:#B4B4B4;
+  --night-line:#363636;
+  --serif:"EB Garamond","Adobe Garamond Pro",Garamond,Georgia,serif;
+  --sans:"Hanken Grotesk","Helvetica Neue",Arial,sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:1rem;line-height:1.6;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--night)}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+:focus-visible{outline:2px solid currentColor;outline-offset:3px}
+.wrap{width:min(1440px,100%);margin-inline:auto;padding-left:max(16px,2.4vw,env(safe-area-inset-left,0px));padding-right:max(16px,2.4vw,env(safe-area-inset-right,0px))}
+h1,h2,h3{text-wrap:balance}
+.serif-h{font-family:var(--serif);font-weight:400;line-height:1.05;letter-spacing:-.005em;margin:0}
+
+/* Buttons: square, small uppercase sans, like the template */
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:.95rem 2.6rem;border:1px solid transparent;border-radius:0;font:500 .72rem/1 var(--sans);letter-spacing:.08em;text-transform:uppercase;text-decoration:none;cursor:pointer;transition:opacity .2s ease}
+.btn:hover{opacity:.86}
+.btn-dark{background:var(--night);color:var(--paper)}
+.btn-light{background:var(--paper);color:var(--night)}
+.btn-sage{background:var(--sage);color:var(--night)}
+.btn-outline{background:transparent;color:var(--paper);border-color:#6A6A6A}
+
+/* Header */
+.top{position:relative;background:var(--night);color:var(--paper)}
+.site-head{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:1rem;padding-block:20px}
+.logo{justify-self:start;font-family:var(--serif);font-style:italic;font-size:1.6rem;line-height:1;text-decoration:none}
+.main-nav{display:flex;gap:1.7rem}
+.main-nav a,.head-right .book{font-size:.74rem;letter-spacing:.06em;text-transform:uppercase;text-decoration:none}
+.main-nav a:hover,.head-right a:hover{opacity:.7}
+.head-right{justify-self:end;display:flex;align-items:center;gap:1.25rem}
+.icon{width:18px;height:18px;display:block}
+.menu{display:none}
+.menu summary{list-style:none;cursor:pointer;padding:.5rem 0 .5rem .5rem}
+.menu summary::-webkit-details-marker{display:none}
+.menu .bars{display:grid;gap:6px;width:26px}
+.menu .bars span{height:1px;background:var(--paper)}
+.menu-panel{position:absolute;left:0;right:0;top:100%;z-index:20;background:var(--night);border-top:1px solid var(--night-line);padding:1.5rem max(16px,env(safe-area-inset-right,0px)) 2rem max(16px,env(safe-area-inset-left,0px));display:grid;gap:1rem}
+.menu-panel a{font-family:var(--serif);font-size:1.8rem;text-decoration:none}
+@media (max-width:820px){
+  .main-nav{display:none}
+  .site-head{grid-template-columns:1fr auto}
+  .menu{display:block}
+  .head-right .book{display:none}
+}
+
+/* Hero */
+.stage{position:relative;height:clamp(540px,54vw,800px);overflow:hidden}
+.h-left{position:absolute;top:0;left:0;width:50%;height:100%;object-fit:cover;object-position:50% 24%}
+.h-right{position:absolute;left:63%;top:13%;width:23%;height:68%;object-fit:cover;object-position:50% 30%}
+.shade{display:none}
+.hero-copy{position:absolute;left:51%;top:47%;transform:translate(-50%,-50%);z-index:2;display:grid;justify-items:center;gap:2.2rem;text-align:center}
+.hero-copy h1{font-family:var(--serif);font-weight:400;font-size:clamp(3.4rem,7.6vw,7.2rem);line-height:.9;letter-spacing:-.02em;margin:0;color:var(--paper);text-shadow:0 2px 40px rgba(0,0,0,.35);white-space:nowrap}
+.hero-copy h1 em{display:block;font-style:italic;margin-left:-.35em}
+@media (max-width:760px){
+  .stage{height:auto;display:grid;overflow:visible}
+  .h-left{position:relative;grid-area:1/1;width:100%;height:auto;aspect-ratio:3/4}
+  .shade{display:block;grid-area:1/1;background:linear-gradient(to top,rgba(18,18,18,.6),rgba(18,18,18,0) 55%)}
+  .hero-copy{position:relative;grid-area:1/1;left:auto;top:auto;transform:none;align-self:end;justify-self:center;padding-bottom:2.25rem;gap:1.5rem}
+  .h-right{position:relative;grid-row:2;left:auto;top:auto;width:70%;height:auto;aspect-ratio:3/4;justify-self:center;margin-block:2.5rem 3rem}
+}
+
+/* Intro statement */
+.intro{padding-block:clamp(2.5rem,5vw,3.5rem) 0}
+.statement{font-family:var(--serif);font-size:clamp(1.55rem,2.9vw,2.45rem);line-height:1.18;max-width:56rem;margin:0 0 1.1rem}
+.status{font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 1.6rem}
+.rule{border:0;border-top:1px solid var(--rule);margin:clamp(3rem,6vw,4rem) 0 0}
+
+/* Services: staggered grid */
+.services{padding-block:clamp(3rem,6vw,4.5rem) clamp(4rem,8vw,6.5rem)}
+.center-head{text-align:center;max-width:40rem;margin:0 auto clamp(2.5rem,5vw,4rem)}
+.center-head h2{font-size:clamp(2.3rem,4.4vw,3.6rem);margin-bottom:1.25rem}
+.center-head p{font-size:.88rem;max-width:26rem;margin:0 auto}
+.stagger{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:clamp(1rem,2.4vw,2rem)}
+.card{margin:0;min-width:0}
+.card img{width:100%;object-fit:cover}
+.card h3{font-family:var(--serif);font-weight:400;font-size:clamp(1.55rem,2.3vw,2rem);line-height:1.1;margin:.8rem 0 .45rem}
+.card .meta{font-size:.68rem;letter-spacing:.03em;text-transform:uppercase;margin:0}
+.c1{grid-column:1 / span 6;grid-row:1 / span 2}
+.c1 img{aspect-ratio:2/3;object-position:50% 25%}
+.c2{grid-column:8 / span 5;grid-row:1}
+.c2 img{aspect-ratio:3/4}
+.c3{grid-column:9 / span 4;grid-row:3;margin-top:clamp(1rem,2vw,2rem)}
+.c3 img{aspect-ratio:6/7;object-position:50% 40%}
+@media (max-width:760px){
+  .stagger{grid-template-columns:1fr;row-gap:2.75rem}
+  .c1,.c2,.c3{grid-column:1;grid-row:auto;margin-top:0}
+}
+
+/* Testimonials */
+.voices{background:var(--night);color:var(--paper);text-align:center;padding-block:clamp(3rem,6vw,4.5rem) clamp(2rem,4vw,3rem)}
+.kicker{font-size:.68rem;letter-spacing:.06em;text-transform:uppercase;color:var(--night-muted);margin:0 0 1.4rem}
+.quotes{display:grid;max-width:48rem;margin:0 auto}
+.quote{grid-area:1/1;margin:0;visibility:hidden;opacity:0;transition:opacity .45s ease}
+.quote.on{visibility:visible;opacity:1}
+.quote p{font-family:var(--serif);font-size:clamp(1.55rem,3.1vw,2.45rem);line-height:1.2;color:var(--sage-light);margin:0 0 1.1rem}
+.quote cite{font-style:normal;font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--night-muted)}
+.q-nav{display:flex;justify-content:center;align-items:center;gap:1.1rem;margin-top:1.6rem;font-size:.75rem;color:var(--night-muted);font-variant-numeric:tabular-nums}
+.q-nav button{width:44px;height:44px;display:grid;place-items:center;background:none;border:1px solid #4A4A4A;color:var(--paper);cursor:pointer;font:400 1.1rem/1 var(--sans)}
+.q-nav button:hover{border-color:var(--paper)}
+.score{font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--night-muted);margin:1.6rem 0 0}
+.score a{color:var(--paper);text-underline-offset:3px}
+.wide{margin:clamp(2.5rem,5vw,3.5rem) 0 0}
+.wide img{width:100%;aspect-ratio:2/1;object-fit:cover;object-position:50% 70%}
+@media (max-width:760px){.wide img{aspect-ratio:4/3}}
+
+/* About */
+.about{padding-block:clamp(3.5rem,7vw,5.5rem)}
+.about-grid{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,1.6fr) minmax(0,6.4fr);align-items:center}
+.about-text{grid-column:1}
+.about-text h2{font-size:clamp(2rem,3.2vw,2.8rem);margin-bottom:1.25rem}
+.about-text p{font-size:.92rem;margin:0 0 1rem}
+.facts{font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:1.4rem 0 1.8rem}
+.about-fig{grid-column:3;margin:0}
+.about-fig img{width:100%;aspect-ratio:3/4;object-fit:cover}
+.about-fig figcaption{font-size:.75rem;color:var(--muted);margin-top:.55rem}
+@media (max-width:760px){
+  .about-grid{grid-template-columns:1fr;gap:1.75rem}
+  .about-text,.about-fig{grid-column:1}
+  .about-fig{order:-1}
+}
+
+/* FAQ */
+.faq{padding-block:0 clamp(3.5rem,7vw,5.5rem)}
+.faq h2{text-align:center;font-size:clamp(2.3rem,4vw,3.2rem);margin-bottom:1.6rem}
+.faq-list{max-width:37rem;margin:0 auto;border-top:1px solid #4A4A4A}
+.faq details{border-bottom:1px solid #4A4A4A}
+.faq summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:1rem;min-height:48px;padding:.6rem 0;font-family:var(--serif);font-size:1.1rem;line-height:1.3;cursor:pointer}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";flex:none;font-family:var(--sans);font-weight:300;font-size:1.3rem;line-height:1}
+.faq details[open] summary::after{content:"–"}
+.faq details p{margin:0 0 1.1rem;font-size:.92rem;color:var(--muted);max-width:34rem}
+
+/* Portfolio band */
+.portfolio{background:var(--rose);color:var(--paper);padding-block:clamp(2.5rem,5vw,3.5rem)}
+.pf-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,2.4fr) minmax(0,4.6fr);align-items:center}
+.pf-fig{grid-column:1;position:relative;margin:0}
+.pf-fig img{width:100%;aspect-ratio:3/4;object-fit:cover}
+.ba-toggle{position:absolute;left:12px;bottom:12px;display:flex;background:var(--paper)}
+.ba-toggle button{min-height:40px;padding:.6rem 1rem;border:0;background:transparent;color:var(--night);font:500 .68rem/1 var(--sans);letter-spacing:.08em;text-transform:uppercase;cursor:pointer}
+.ba-toggle button[aria-pressed="true"]{background:var(--night);color:var(--paper)}
+.pf-text{grid-column:3}
+.pf-text h2{font-size:clamp(2rem,3.2vw,2.8rem);color:var(--linen);margin-bottom:1.25rem}
+.pf-text .her{font-family:var(--serif);font-style:italic;font-size:clamp(1.2rem,1.8vw,1.45rem);line-height:1.3;margin:0 0 .4rem}
+.pf-text .who{font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--linen);margin:0 0 1.1rem}
+.pf-text p{font-size:.92rem;margin:0 0 1.75rem;max-width:26rem}
+@media (max-width:760px){
+  .pf-grid{grid-template-columns:1fr;gap:2rem}
+  .pf-fig,.pf-text{grid-column:1}
+}
+
+/* Instagram community */
+.community{padding-block:clamp(3.5rem,7vw,5.5rem) clamp(2.5rem,5vw,4rem);text-align:center;overflow:hidden}
+.community h2{font-size:clamp(2.3rem,4vw,3.2rem);margin-bottom:1rem}
+.ig-line{display:inline-flex;align-items:center;gap:.55rem;font-size:.74rem;letter-spacing:.06em;text-transform:uppercase;text-decoration:none}
+.ig-line:hover{opacity:.7}
+.floats{position:relative;height:clamp(380px,38vw,540px);margin-top:1.5rem}
+.float{position:absolute;margin:0;will-change:transform}
+.float img{width:100%;aspect-ratio:3/4;object-fit:cover}
+.f1{left:6%;top:10%;width:12%}
+.f2{left:31%;top:44%;width:8%}
+.f3{left:55%;top:4%;width:14%}
+.f4{left:84%;top:30%;width:9%}
+@media (max-width:760px){
+  .floats{height:auto;display:grid;justify-items:center;gap:2.25rem;margin-top:2.5rem}
+  .float{position:static;transform:none!important}
+  .f1{width:70%}.f2{width:44%}.f3{width:62%}.f4{width:40%}
+}
+
+/* Footer with booking form */
+.site-foot{background:var(--night);color:var(--paper);padding-block:clamp(3.5rem,7vw,5rem) 2rem}
+.foot-grid{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(0,1fr);gap:clamp(3rem,7vw,7rem)}
+@media (max-width:900px){.foot-grid{grid-template-columns:1fr}}
+.foot-title{font-family:var(--sans);font-weight:400;font-size:clamp(1.35rem,2.2vw,1.7rem);line-height:1.2;margin:0 0 .6rem}
+.foot-sub{font-size:.88rem;color:var(--night-muted);margin:0 0 1.75rem;max-width:34rem}
+.fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem 1.1rem}
+@media (max-width:600px){.fields{grid-template-columns:1fr}}
+.full{grid-column:1 / -1}
+.field{display:grid;gap:.4rem;min-width:0}
+.field > span{font-size:.68rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--night-muted)}
+.site-foot input,.site-foot select,.site-foot textarea{width:100%;min-height:48px;padding:.75rem .9rem;border:0;border-radius:0;background:var(--paper);color:var(--night);font:400 .95rem/1.4 var(--sans)}
+.site-foot textarea{min-height:110px;resize:vertical}
+.site-foot input:focus,.site-foot select:focus,.site-foot textarea:focus{outline:2px solid var(--sage-light);outline-offset:2px}
+.hint{font-size:.82rem;color:var(--sage-light);margin:0;min-height:1.3em}
+.form-foot{display:flex;flex-wrap:wrap;align-items:center;gap:1rem 1.5rem;margin-top:1.4rem}
+.result{border:1px solid var(--night-line);padding:clamp(1.25rem,3vw,1.75rem)}
+.result h3{font-weight:400;font-size:1.3rem;margin:0 0 .4rem}
+.result p{font-size:.88rem;color:var(--night-muted);margin:0 0 1rem}
+.result textarea{min-height:250px;font-size:.88rem}
+.result .actions{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.1rem}
+.foot-cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2.25rem 2rem;align-content:start}
+.foot-cols h3{font-size:.72rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;margin:0 0 .9rem}
+.foot-cols ul{list-style:none;margin:0;padding:0;display:grid;gap:.55rem;font-size:.9rem}
+.foot-cols a{text-underline-offset:3px}
+.foot-cols .plain{color:var(--night-muted);font-size:.85rem}
+.mini{justify-self:start;padding:0;border:0;background:none;color:var(--sage-light);font:inherit;font-size:.78rem;text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+.legal{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.75rem 2rem;margin-top:clamp(3rem,6vw,4rem);padding-top:1.25rem;border-top:1px solid var(--night-line);font-size:.78rem;color:var(--night-muted)}
+.legal .logo{font-size:1.3rem;color:var(--paper)}
+
+/* Gallery viewer */
+dialog.gallery{padding:0;border:0;background:var(--night);color:var(--paper);width:min(94vw,700px);max-height:94vh}
+dialog.gallery::backdrop{background:rgba(10,10,10,.88)}
+.g-img{width:100%;max-height:76vh;object-fit:contain;background:#000}
+.g-bar{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.8rem 1rem;font-size:.85rem}
+.g-bar .g-cap{min-width:0}
+.g-bar .g-count{color:var(--night-muted);font-variant-numeric:tabular-nums;white-space:nowrap}
+.g-ctrls{display:flex;gap:.5rem}
+.g-ctrls button{min-width:44px;height:40px;padding:0 .8rem;background:none;border:1px solid #4A4A4A;color:var(--paper);cursor:pointer;font:500 .7rem/1 var(--sans);letter-spacing:.08em;text-transform:uppercase}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition:none!important;animation:none!important}
+}
+</style>
+</head>
+<body>
+<div class="top" id="top">
+  <header class="wrap site-head">
+    <a class="logo" href="#top">Shruti Arya</a>
+    <nav class="main-nav" aria-label="Main">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="head-right">
+      <a class="book" href="#contact">Book</a>
+      <a href="https://www.instagram.com/shrutiaryamua/" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1" fill="currentColor" stroke="none"/></svg>
+      </a>
+      <details class="menu">
+        <summary aria-label="Menu"><span class="bars" aria-hidden="true"><span></span><span></span></span></summary>
+        <nav class="menu-panel" aria-label="Mobile">
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contact">Book your date</a>
+        </nav>
+      </details>
+    </div>
+  </header>
+
+  <section class="stage" aria-label="Introduction">
+    <img class="h-left" src="img/hijab-bride.jpg" width="900" height="1200" alt="Bride in a white hijab with glowing skin, bronze eyes and a soft rose lip">
+    <div class="shade" aria-hidden="true"></div>
+    <img class="h-right" src="img/full-glam.jpg" width="900" height="1200" alt="Blonde bride with Hollywood waves, full lashes and a glossy pink lip">
+    <div class="hero-copy">
+      <h1>You, but <em>enhanced</em></h1>
+      <a class="btn btn-light" href="#contact">Check your date</a>
+    </div>
+  </section>
+</div>
+
+<main>
+  <section class="intro">
+    <div class="wrap">
+      <p class="statement">Shruti Arya is a Long Island bridal makeup and hair artist, creating looks that give you the moment without taking over the woman wearing it.</p>
+      <p class="status">Now booking 2027–2028 brides · Limited 2026 dates</p>
+      <a class="btn btn-dark" href="#services">View services</a>
+      <hr class="rule">
+    </div>
+  </section>
+
+  <section class="services" id="services" aria-labelledby="svc-title">
+    <div class="wrap">
+      <div class="center-head">
+        <h2 class="serif-h" id="svc-title">Services for every bride.</h2>
+        <p>On-site makeup and hair across Long Island and New York City. False lashes and a consultation come with every booking.</p>
+      </div>
+      <div class="stagger">
+        <figure class="card c1">
+          <img src="img/soft-after.jpg" width="900" height="1200" loading="lazy" alt="Bride with luminous skin, bronzed eyes and a nude-pink lip">
+          <figcaption><h3>Bridal Makeup</h3><p class="meta">Traditional from $225 · Airbrush from $250</p></figcaption>
+        </figure>
+        <figure class="card c2">
+          <img src="img/bourne-laugh.jpg" width="900" height="1200" loading="lazy" alt="Black and white photo of a laughing bride holding champagne beside the groom">
+          <figcaption><h3>Wedding Party</h3><p class="meta">Bridesmaids, mothers &amp; family · From $125 each</p></figcaption>
+        </figure>
+        <figure class="card c3">
+          <img src="img/full-glam-eyes.jpg" width="900" height="1200" loading="lazy" alt="Close-up of a smoky lid and full lashes">
+          <figcaption><h3>Special Events</h3><p class="meta">Proms · Mitzvahs · Showers · Photo shoots</p></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="voices" id="reviews" aria-labelledby="rev-title">
+    <div class="wrap">
+      <p class="kicker" id="rev-title">What her brides are saying</p>
+      <div class="quotes" aria-live="polite">
+        <blockquote class="quote on"><p>“Shruti made me look like an absolute queen for my wedding day.”</p><cite>Milena, bride · 2025</cite></blockquote>
+        <blockquote class="quote" aria-hidden="true"><p>“She took the time to understand my vision, carefully listening to every detail I wanted.”</p><cite>Serene, mother of the bride · 2024</cite></blockquote>
+        <blockquote class="quote" aria-hidden="true"><p>“Shruti did the most AMAZING job with my, and my bridesmaids, make up for my wedding.”</p><cite>Kristi, bride · 2024</cite></blockquote>
+        <blockquote class="quote" aria-hidden="true"><p>“She knew exactly what every single person needed to look their absolute best.”</p><cite>Jeanette, bridal party · 2021</cite></blockquote>
+        <blockquote class="quote" aria-hidden="true"><p>“Shruti created such a glamorous and memorable experience for myself and those involved in my wedding party.”</p><cite>Samantha, bride · 2021</cite></blockquote>
+        <blockquote class="quote" aria-hidden="true"><p>“Her skillset and experience is unmatched with any other MUA I’ve encountered so far.”</p><cite>Chari, bride · 2019</cite></blockquote>
+        <blockquote class="quote" aria-hidden="true"><p>“Shruti is an absolute artist!”</p><cite>Candice, bride · 2020</cite></blockquote>
+      </div>
+      <div class="q-nav">
+        <button type="button" id="q-prev" aria-label="Previous review">←</button>
+        <span id="q-count">1 / 7</span>
+        <button type="button" id="q-next" aria-label="Next review">→</button>
+      </div>
+      <p class="score">5.0 from 29 reviews on <a href="https://www.weddingwire.com/reviews/shruti-arya-mua/2a06334fce40f8a9.html" target="_blank" rel="noopener">WeddingWire</a> · 100% of couples recommend</p>
+      <figure class="wide">
+        <img src="img/bourne-run-wide.jpg" width="1080" height="560" loading="lazy" alt="Bride and groom running hand in hand across a lawn at Bourne Mansion, her long veil trailing">
+      </figure>
+    </div>
+  </section>
+
+  <section class="about" id="about" aria-labelledby="about-title">
+    <div class="wrap about-grid">
+      <div class="about-text">
+        <h2 class="serif-h" id="about-title">Nice to meet you. I’m Shruti.</h2>
+        <p>I’ve loved makeup since I was a kid. I started freelancing in 2009, then joined MAC Cosmetics and became a manager there.</p>
+        <p>Since then I’ve worked on every skin tone and type, from natural looks to full drama and even some FX. Today I’m a beauty stylist and run my own bridal business from Bellmore, traveling to brides across Long Island, New York City and the boroughs.</p>
+        <p class="facts">Woman-owned · Asian-owned · Former MAC manager</p>
+        <a class="btn btn-dark" href="#contact">Contact me</a>
+      </div>
+      <figure class="about-fig">
+        <img src="img/lehenga-bride.jpg" width="900" height="1200" loading="lazy" alt="South Asian bride in a red embroidered lehenga with gold and emerald jewelry and a maang tikka">
+        <figcaption>Hair and makeup by Shruti · Crest Hollow Country Club</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="faq" id="faq" aria-labelledby="faq-title">
+    <div class="wrap">
+      <h2 class="serif-h" id="faq-title">FAQs</h2>
+      <div class="faq-list">
+        <details><summary>How much does bridal makeup cost?</summary><p>Traditional bridal makeup starts at $225, with a $150 trial. Airbrush bridal makeup starts at $250, with a $175 trial. Bridesmaids, mothers and family start at $125 per person. Send your date and party size for an exact quote.</p></details>
+        <details><summary>Do you do hair too?</summary><p>Yes. Shruti offers bridal makeup and hair, and a stylist from her team can help when your party is large.</p></details>
+        <details><summary>Do you come to us?</summary><p>Yes. Shruti works on site at your home, hotel or venue across Long Island, New York City and the boroughs.</p></details>
+        <details><summary>What’s included?</summary><p>False lashes and a consultation come with every makeup booking.</p></details>
+        <details><summary>How big a bridal party can you do?</summary><p>Up to 20 people on the wedding day.</p></details>
+        <details><summary>Which dates are you booking?</summary><p>Now booking 2027 and 2028 brides, with limited availability left in 2026.</p></details>
+        <details><summary>Can you work with my skin, allergies or hooded eyes?</summary><p>Yes. Years at MAC Cosmetics mean Shruti has worked with every skin tone and type. Past brides mention her care with allergies, hooded and uneven lids, and keeping makeup natural for brides who rarely wear it.</p></details>
+        <details><summary>Will my makeup last all night?</summary><p>It’s built to. Past brides say theirs held up through humidity, pouring rain and a hurricane weekend.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="portfolio" id="gallery" aria-labelledby="pf-title">
+    <div class="wrap pf-grid">
+      <figure class="pf-fig">
+        <img id="ba-img" src="img/merrick-after.jpg" width="900" height="1200" loading="lazy" alt="Bride after makeup with even skin, defined lashes, a soft pink lip and loose curls">
+        <div class="ba-toggle" role="group" aria-label="Before and after">
+          <button type="button" data-src="img/merrick-before.jpg" data-alt="The same bride before makeup, bare skin and long hair down" aria-pressed="false">Before</button>
+          <button type="button" data-src="img/merrick-after.jpg" data-alt="Bride after makeup with even skin, defined lashes, a soft pink lip and loose curls" aria-pressed="true">After</button>
+        </div>
+      </figure>
+      <div class="pf-text">
+        <h2 class="serif-h" id="pf-title">Portfolio Gallery</h2>
+        <p class="her">“The assignment was bride. Not a completely different person.”</p>
+        <p class="who">Shruti, on Instagram</p>
+        <p>Every look starts from your own face, so you still look like yourself when you walk down the aisle. Tap Before to see this Merrick bride without makeup.</p>
+        <button class="btn btn-sage" type="button" id="open-gallery">See the gallery</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="community" aria-labelledby="ig-title">
+    <div class="wrap">
+      <h2 class="serif-h" id="ig-title">Follow along on Instagram.</h2>
+      <a class="ig-line" href="https://www.instagram.com/shrutiaryamua/" target="_blank" rel="noopener">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1" fill="currentColor" stroke="none"/></svg>
+        @shrutiaryamua · 7.6K followers
+      </a>
+      <div class="floats">
+        <figure class="float f1" data-speed="-0.12"><img src="img/hijab-bride-glance.jpg" width="900" height="1200" loading="lazy" alt="Hijabi bride glancing down"></figure>
+        <figure class="float f2" data-speed="0.10"><img src="img/merrick-lids.jpg" width="900" height="1200" loading="lazy" alt="Bride with eyes closed showing a champagne lid"></figure>
+        <figure class="float f3" data-speed="-0.06"><img src="img/bourne-veil.jpg" width="900" height="1200" loading="lazy" alt="Black and white photo of a bride under a sheer veil"></figure>
+        <figure class="float f4" data-speed="0.14"><img src="img/soft-eyes.jpg" width="900" height="1200" loading="lazy" alt="Bride with eyes closed showing a soft shimmer lid"></figure>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-foot" id="contact">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h2 class="foot-title">Check your date</h2>
+        <p class="foot-sub">Now booking 2027–2028 brides, with limited 2026 dates. Share a few details and Shruti will reply with her availability and a quote.</p>
+        <form id="inquiry" novalidate>
+          <div class="fields">
+            <label class="field"><span>Your name</span><input id="name" name="name" autocomplete="name" required></label>
+            <label class="field"><span>Email</span><input id="email" name="email" type="email" autocomplete="email" required></label>
+            <label class="field"><span>Phone</span><input id="phone" name="phone" type="tel" autocomplete="tel"></label>
+            <label class="field"><span>Event date</span><input id="date" name="date" type="date" required></label>
+            <p class="hint full" id="date-note" aria-live="polite">Now booking 2027–2028 brides. Limited 2026 dates.</p>
+            <label class="field"><span>Venue or town</span><input id="venue" name="venue" placeholder="Where you’re getting ready"></label>
+            <label class="field"><span>People needing hair or makeup</span><input id="people" name="people" type="number" min="1" inputmode="numeric" placeholder="Including the bride"></label>
+            <label class="field full"><span>Service</span>
+              <select id="service" name="service">
+                <option>Bridal makeup</option>
+                <option>Bridal hair &amp; makeup</option>
+                <option>Airbrush bridal makeup</option>
+                <option>Wedding party only</option>
+                <option>Special event (prom, mitzvah, shower, shoot)</option>
+              </select>
+            </label>
+            <label class="field full"><span>Anything else?</span><textarea id="message" name="message" placeholder="Your vision, ceremony times, skin concerns"></textarea></label>
+          </div>
+          <div class="form-foot">
+            <button class="btn btn-light" type="submit">Prepare my inquiry</button>
+            <p class="hint" id="form-error" aria-live="polite"></p>
+          </div>
+        </form>
+        <div class="result" id="result" hidden>
+          <h3>Your inquiry is ready</h3>
+          <p>This preview site doesn’t send messages yet. Copy your inquiry and email it to shrutiaryamua@gmail.com, or send it as a DM to @shrutiaryamua.</p>
+          <label class="field"><span>Your message</span><textarea id="inquiry-text" readonly></textarea></label>
+          <div class="actions">
+            <button class="btn btn-light" type="button" id="copy-inquiry">Copy inquiry</button>
+            <a class="btn btn-outline" id="mail-link" href="mailto:shrutiaryamua@gmail.com">Open in email app</a>
+            <button class="btn btn-outline" type="button" id="edit-inquiry">Edit details</button>
+          </div>
+        </div>
+      </div>
+      <div class="foot-cols">
+        <div>
+          <h3>Contact</h3>
+          <ul>
+            <li><a href="mailto:shrutiaryamua@gmail.com" class="copy-src">shrutiaryamua@gmail.com</a></li>
+            <li><button class="mini" type="button" data-copy="shrutiaryamua@gmail.com">Copy email</button></li>
+            <li><a href="tel:+15162036670" class="copy-src">(516) 203-6670</a></li>
+            <li><button class="mini" type="button" data-copy="(516) 203-6670">Copy number</button></li>
+            <li class="plain">Bellmore, NY 11710</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Explore</h3>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#faq">FAQs</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Follow</h3>
+          <ul>
+            <li><a href="https://www.instagram.com/shrutiaryamua/" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="https://www.weddingwire.com/biz/shruti-arya-mua/2a06334fce40f8a9.html" target="_blank" rel="noopener">WeddingWire</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Service area</h3>
+          <ul>
+            <li class="plain">Long Island, New York City and the boroughs</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="legal">
+      <span class="logo">Shruti Arya</span>
+      <span>© <span id="yr">2026</span> Shruti Arya MUA · Photos from @shrutiaryamua</span>
+    </div>
+  </div>
+</footer>
+
+<dialog class="gallery" id="gallery-viewer" aria-label="Photo gallery">
+  <img class="g-img" src="" alt="">
+  <div class="g-bar">
+    <span class="g-cap"></span>
+    <span class="g-count"></span>
+    <div class="g-ctrls">
+      <button type="button" id="g-prev" aria-label="Previous photo">←</button>
+      <button type="button" id="g-next" aria-label="Next photo">→</button>
+      <button type="button" id="g-close">Close</button>
+    </div>
+  </div>
+</dialog>
+
+<script>
+(function(){
+  var pad = function(n){ return String(n).padStart(2,'0'); };
+  var now = new Date();
+  var todayStr = now.getFullYear() + '-' + pad(now.getMonth()+1) + '-' + pad(now.getDate());
+  document.getElementById('yr').textContent = now.getFullYear();
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Mobile menu closes after a link is chosen
+  document.querySelectorAll('.menu-panel a').forEach(function(a){
+    a.addEventListener('click', function(){ a.closest('details').open = false; });
+  });
+
+  // Review carousel
+  var quotes = Array.prototype.slice.call(document.querySelectorAll('.quote'));
+  var qCount = document.getElementById('q-count');
+  var qi = 0;
+  function showQuote(i){
+    qi = (i + quotes.length) % quotes.length;
+    quotes.forEach(function(q, j){ q.classList.toggle('on', j === qi); q.setAttribute('aria-hidden', j === qi ? 'false' : 'true'); });
+    qCount.textContent = (qi + 1) + ' / ' + quotes.length;
+  }
+  document.getElementById('q-prev').addEventListener('click', function(){ showQuote(qi - 1); });
+  document.getElementById('q-next').addEventListener('click', function(){ showQuote(qi + 1); });
+
+  // Before / after toggle
+  var baImg = document.getElementById('ba-img');
+  var baBtns = document.querySelectorAll('.ba-toggle button');
+  baBtns.forEach(function(btn){
+    new Image().src = btn.dataset.src;
+    btn.addEventListener('click', function(){
+      baImg.src = btn.dataset.src; baImg.alt = btn.dataset.alt;
+      baBtns.forEach(function(b){ b.setAttribute('aria-pressed', b === btn ? 'true' : 'false'); });
+    });
+  });
+
+  // Gallery viewer
+  var photos = [
+    ['hijab-bride.jpg','Hijabi bridal glam · Photo @djgudah','Bride in a white hijab with glowing skin and bronze eyes'],
+    ['full-glam.jpg','Full glam · Valley Regency · Hair @themanewave','Blonde bride with Hollywood waves and full lashes'],
+    ['lehenga-bride.jpg','Hair and makeup by Shruti · Crest Hollow Country Club','South Asian bride in a red lehenga with gold jewelry'],
+    ['soft-after.jpg','Soft bridal glam · Long Island','Bride with luminous skin and bronzed eyes'],
+    ['merrick-after.jpg','Merrick bride','Bride with soft pink lip and loose curls'],
+    ['hijab-bride-glance.jpg','Hijabi bridal glam · Reception at Leonard’s','Hijabi bride glancing down'],
+    ['full-glam-eyes.jpg','Full glam, eye detail · Valley Regency','Smoky lid and full lashes'],
+    ['bourne-laugh.jpg','Bourne Mansion, Oakdale · Hair @didahairandmakeup','Laughing bride holding champagne'],
+    ['bourne-veil.jpg','Bourne Mansion · Gown Milla Nova','Bride under a sheer veil'],
+    ['soft-eyes.jpg','Soft bridal glam, eye detail','Soft shimmer lid and wispy lashes'],
+    ['merrick-lids.jpg','Merrick bride, eye detail','Champagne lid and soft liner'],
+    ['bourne-couple.jpg','Reception portrait · Bourne Mansion','Bride and groom in a doorway'],
+    ['bourne-field.jpg','Golden hour · Bourne Mansion · Video @sanchofilms_','Couple running across a lawn']
+  ];
+  var gv = document.getElementById('gallery-viewer');
+  var gImg = gv.querySelector('.g-img'), gCap = gv.querySelector('.g-cap'), gCount = gv.querySelector('.g-count');
+  var gi = 0;
+  function showPhoto(i){
+    gi = (i + photos.length) % photos.length;
+    gImg.src = 'img/' + photos[gi][0]; gImg.alt = photos[gi][2];
+    gCap.textContent = photos[gi][1];
+    gCount.textContent = (gi + 1) + ' / ' + photos.length;
+    new Image().src = 'img/' + photos[(gi + 1) % photos.length][0];
+  }
+  document.getElementById('open-gallery').addEventListener('click', function(){
+    showPhoto(0);
+    if (typeof gv.showModal === 'function') gv.showModal();
+  });
+  document.getElementById('g-prev').addEventListener('click', function(){ showPhoto(gi - 1); });
+  document.getElementById('g-next').addEventListener('click', function(){ showPhoto(gi + 1); });
+  document.getElementById('g-close').addEventListener('click', function(){ gv.close(); });
+  gv.addEventListener('click', function(e){ if (e.target === gv) gv.close(); });
+  gv.addEventListener('keydown', function(e){
+    if (e.key === 'ArrowRight') showPhoto(gi + 1);
+    if (e.key === 'ArrowLeft') showPhoto(gi - 1);
+  });
+
+  // Gentle drift on the scattered Instagram photos
+  var floats = document.querySelectorAll('.float');
+  var ticking = false;
+  function drift(){
+    ticking = false;
+    if (window.innerWidth <= 760) return;
+    var mid = window.innerHeight / 2;
+    floats.forEach(function(f){
+      var r = f.getBoundingClientRect();
+      var off = (r.top + r.height / 2 - mid) * Number(f.dataset.speed || 0);
+      off = Math.max(-70, Math.min(70, off));
+      f.style.transform = 'translateY(' + off.toFixed(1) + 'px)';
+    });
+  }
+  if (!reduced) {
+    window.addEventListener('scroll', function(){ if (!ticking) { ticking = true; requestAnimationFrame(drift); } }, { passive: true });
+    window.addEventListener('resize', drift);
+    drift();
+  }
+
+  // Date availability note
+  var dateInput = document.getElementById('date');
+  var note = document.getElementById('date-note');
+  dateInput.min = todayStr;
+  function updateNote(){
+    var v = dateInput.value;
+    if (!v) { note.textContent = 'Now booking 2027–2028 brides. Limited 2026 dates.'; return; }
+    if (v < todayStr) { note.textContent = 'That date has passed. Pick an upcoming date.'; return; }
+    var y = Number(v.slice(0,4));
+    if (y === 2026) note.textContent = 'Limited 2026 availability, so send this soon.';
+    else if (y === 2027 || y === 2028) note.textContent = 'Now booking ' + y + ' brides.';
+    else note.textContent = 'Send your date and Shruti will confirm her availability.';
+  }
+  dateInput.addEventListener('change', updateNote);
+  dateInput.addEventListener('input', updateNote);
+
+  // Inquiry composer
+  var form = document.getElementById('inquiry');
+  var result = document.getElementById('result');
+  var out = document.getElementById('inquiry-text');
+  var err = document.getElementById('form-error');
+  var val = function(id){ return document.getElementById(id).value.trim(); };
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var missing = [];
+    if (!val('name')) missing.push('your name');
+    if (!val('email') || !document.getElementById('email').checkValidity()) missing.push('a valid email');
+    if (!val('date')) missing.push('your event date');
+    if (missing.length) { err.textContent = 'Add ' + missing.join(', ') + ' to continue.'; return; }
+    if (val('date') < todayStr) { err.textContent = 'Pick an upcoming event date.'; return; }
+    err.textContent = '';
+    var nice = new Date(val('date') + 'T12:00:00').toLocaleDateString('en-US', { weekday:'long', month:'long', day:'numeric', year:'numeric' });
+    var lines = ['Hi Shruti,', '', 'I’d love to check your availability for ' + nice + '.', '', 'Name: ' + val('name'), 'Email: ' + val('email')];
+    if (val('phone')) lines.push('Phone: ' + val('phone'));
+    lines.push('Service: ' + val('service'));
+    if (val('venue')) lines.push('Venue or town: ' + val('venue'));
+    if (val('people')) lines.push('People needing hair or makeup: ' + val('people'));
+    if (val('message')) lines.push('', val('message'));
+    lines.push('', 'Thank you!');
+    var text = lines.join('\n');
+    out.value = text;
+    document.getElementById('mail-link').href = 'mailto:shrutiaryamua@gmail.com?subject=' + encodeURIComponent('Inquiry for ' + nice) + '&body=' + encodeURIComponent(text);
+    form.hidden = true; result.hidden = false;
+    result.scrollIntoView({ behavior: reduced ? 'auto' : 'smooth', block: 'start' });
+  });
+  document.getElementById('edit-inquiry').addEventListener('click', function(){
+    result.hidden = true; form.hidden = false; document.getElementById('name').focus();
+  });
+
+  // Copy helpers
+  function flash(btn, msg){
+    var orig = btn.dataset.label || btn.textContent;
+    btn.dataset.label = orig; btn.textContent = msg;
+    setTimeout(function(){ btn.textContent = orig; }, 2200);
+  }
+  function selectEl(el){
+    if (el.select) { el.focus(); el.select(); return; }
+    var r = document.createRange(); r.selectNodeContents(el);
+    var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+  }
+  function copy(text, btn, fallbackEl){
+    var fail = function(){ if (fallbackEl) selectEl(fallbackEl); flash(btn, 'Selected, press Ctrl+C'); };
+    try { navigator.clipboard.writeText(text).then(function(){ flash(btn, 'Copied'); }, fail); } catch (e) { fail(); }
+  }
+  document.getElementById('copy-inquiry').addEventListener('click', function(){ copy(out.value, this, out); });
+  document.querySelectorAll('[data-copy]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var li = btn.closest('li');
+      var src = li && li.previousElementSibling ? li.previousElementSibling.querySelector('.copy-src') : null;
+      copy(btn.dataset.copy, btn, src);
+    });
+  });
+})();
+</script>
+</body>
+</html>
